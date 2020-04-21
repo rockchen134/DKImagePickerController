@@ -331,9 +331,13 @@ open class DKImagePickerController: DKUINavigationController, DKImageBaseManager
         if self.inline {
             exportBlock()
         } else {
-            self.presentingViewController?.dismiss(animated: true, completion: {
+            if singleSelect == true {
                 exportBlock()
-            })
+            } else {
+                self.presentingViewController?.dismiss(animated: true, completion: {
+                    exportBlock()
+                })
+            }
         }
     }
     
