@@ -81,7 +81,7 @@ public class DKImageExtensionController: NSObject {
             "DKImagePickerController.DKImageExtensionGallery",
             "DKImagePickerController.DKImageExtensionCamera",
             "DKImagePickerController.DKImageExtensionInlineCamera",
-            "DKImagePickerController.DKImageExtensionPhotoCropper",
+//            "DKImagePickerController.DKImageExtensionPhotoCropper",
         ]
         
         for defaultClass in defaultClasses {
