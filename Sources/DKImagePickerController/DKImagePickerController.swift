@@ -406,7 +406,10 @@ open class DKImagePickerController: DKUINavigationController, DKImageBaseManager
     
     private func showCamera() {
         let didCancel = { [unowned self] () in
-            self.didCancelCamera()
+            self.dismissCamera()
+            if self.sourceType == .camera {
+                self.dismiss()
+            }
         }
         
         let didFinishCapturingImage = { [weak self] (image: UIImage, metadata: [AnyHashable : Any]?) in
